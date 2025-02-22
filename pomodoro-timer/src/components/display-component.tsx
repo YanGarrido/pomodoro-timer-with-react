@@ -14,10 +14,12 @@ export function TimeDisplay({ secondsLeft, modo }: timeDisplayProps) {
 
   return (
     <div>
-      <div>
-        <h2>{formatTimeLeft(secondsLeft)}</h2>
+      <div className="flex justify-center items-center flex-col mt-5 bg-green-800 w-[200px] h-[200px] rounded-[50%]">
+        <h2 className="font-extrabold text-5xl text-amber-200">
+          {formatTimeLeft(secondsLeft)}
+        </h2>
       </div>
-      <div>
+      <div className="mt-1 text-white">
         <p>{modo === "focus" ? "Foco" : "Descaso"}</p>
       </div>
     </div>

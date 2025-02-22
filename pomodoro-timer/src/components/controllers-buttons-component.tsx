@@ -13,8 +13,11 @@ export function ControlButtons({
 }: ControlButtonsProps) {
   return (
     <div>
-      <button onClick={toggleTimer}>{isActive ? "PAUSE" : "START"}</button>
-      <button onClick={resetTimer}>RESET</button>
+      <div className="my-5 flex items-center justify-between w-[200px]">
+      <button className="bg-gray-800 p-3 rounded-2xl text-white" onClick={toggleTimer}>{isActive ? "PAUSE" : "START"}</button>
+      <button className="bg-gray-800 p-3 rounded-2xl text-white" onClick={resetTimer}>RESET</button>
+
+      </div>
     </div>
   );
 }

@@ -9,9 +9,26 @@ export function TimeSelectorButtons({
 }: TimeSelectorButtonsProps) {
   return (
     <div>
-      <button onClick={() => setFocusTime(25)}>25</button>
-      <button onClick={() => setFocusTime(30)}>30</button>
-      <button onClick={() => setFocusTime(60)}>60</button>
+      <div className="flex justify-between items-center w-[200px] mt-5 text-white">
+        <button
+          className="bg-emerald-600 p-4 rounded-2xl"
+          onClick={() => setFocusTime(25)}
+        >
+          25
+        </button>
+        <button
+          className="bg-emerald-600 p-4 rounded-2xl"
+          onClick={() => setFocusTime(30)}
+        >
+          30
+        </button>
+        <button
+          className="bg-emerald-600 p-4 rounded-2xl"
+          onClick={() => setFocusTime(60)}
+        >
+          60
+        </button>
+      </div>
     </div>
   );
 }
