@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
-
+import useSound from "use-sound";
+import timesUpSfx from "../sounds/timesUp.mp3";
 export function usePomodoroTimer(focusTime: number, relaxTime: number) {
   const [modo, setModo] = useState("focus");
   const [secondsLeft, setSecondsLeft] = useState(focusTime * 60);
   const [isActive, setisActive] = useState(false);
+  const volume = 1;
+
+  const [timesUp] = useSound(timesUpSfx, volume);
 
   useEffect(() => {
     setSecondsLeft(focusTime * 60);
@@ -18,13 +22,15 @@ export function usePomodoroTimer(focusTime: number, relaxTime: number) {
       if (modo === "focus") {
         setModo("relax");
         setSecondsLeft(relaxTime * 60);
+        timesUp();
       } else {
         setModo("focus");
         setSecondsLeft(focusTime * 60);
+        timesUp();
       }
       setisActive(false);
     }
-  }, [isActive, secondsLeft, modo, relaxTime, focusTime]);
+  }, [isActive, secondsLeft, modo, relaxTime, focusTime, timesUp]);
 
   const toggleTimer = () => {
     setisActive(!isActive);
