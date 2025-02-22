@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ControlButtons } from "./components/controllers-buttons-component";
 import { TimeDisplay } from "./components/display-component";
 import { TimeSelectorButtons } from "./components/time-select-buttons-component";

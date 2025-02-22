@@ -1,5 +1,3 @@
-import React from "react";
-
 interface TimeSelectorButtonsProps {
   setFocusTime: (time: number) => void;
 }

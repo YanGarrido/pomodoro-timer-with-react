@@ -1,5 +1,3 @@
-import React from "react";
-
 interface timeDisplayProps {
   secondsLeft: number;
   modo: string;
