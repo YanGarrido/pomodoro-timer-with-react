@@ -18,7 +18,7 @@ export function TimeDisplay({ secondsLeft, modo }: timeDisplayProps) {
         </h2>
       </div>
       <div className="mt-1 text-white">
-        <p>{modo === "focus" ? "Foco" : "Descaso"}</p>
+        <p>{modo === "focus" ? "Foco" : "Descanso"}</p>
       </div>
     </div>
   );
