@@ -1,7 +1,7 @@
-interface CicleButtonsProps {
+interface CycleProgressDotsProps {
     count: number
 }
-export function CicleButtons({count}: CicleButtonsProps) {
+export function CycleProgressDots({count}: CycleProgressDotsProps) {
     const totalSteps = 4;
   
   return (
